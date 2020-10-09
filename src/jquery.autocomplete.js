@@ -997,7 +997,8 @@
             } else {
                 // If instance already exists, destroy it:
                 if (instance && instance.dispose) {
-                    instance.dispose();
+                   //dont destory it. Some may need it 
+                   // instance.dispose();
                 }
                 instance = new Autocomplete(this, options);
                 inputElement.data(dataKey, instance);
