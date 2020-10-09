@@ -13,6 +13,7 @@
 (function (factory) {
     "use strict";
     if (typeof define === 'function' && define.amd) {
+      console.log("RASTERIZING")
         // AMD. Register as an anonymous module.
         define(['jquery'], factory);
     } else if (typeof exports === 'object' && typeof require === 'function') {
@@ -996,7 +997,8 @@
             } else {
                 // If instance already exists, destroy it:
                 if (instance && instance.dispose) {
-                    instance.dispose();
+                   //dont destory it. Some may need it 
+                   // instance.dispose();
                 }
                 instance = new Autocomplete(this, options);
                 inputElement.data(dataKey, instance);
